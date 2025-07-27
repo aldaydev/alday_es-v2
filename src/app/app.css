@@ -1,4 +1,5 @@
 .app-main{
     background-color: var(--color-primary);
     color: white;
+    padding: 30px var(--res-padding);
 }
