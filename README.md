@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## chore/routes
+* Condifuración de las rutas iniciales
+
 ## chore/setup
 * Configuración de estilos globales iniciales
 * Disposición de componentes iniciales (header, footer, main)
