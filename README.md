@@ -1,5 +1,9 @@
 # AldayEsV2
 
+## chore/setup
+* Configuración de estilos globales iniciales
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
 
 ## Development server
