@@ -3,7 +3,7 @@
     <a routerLink="/" class="header__brandLink">
         <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__brandImage">
     </a>
-    
+
     <nav class="header__nav">
 
         <ul class="headerNav__pageList">
@@ -20,66 +20,41 @@
 
         <ul class="headerNav__socialList">
             <li class="headerNav__socialItem">
-                <a 
-                    href="https://youtube.com/@aldaymusic"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="headerNav__socialLink"
-                >
+                <a href="https://youtube.com/@aldaymusic" target="_blank" rel="noreferrer noopener"
+                    class="headerNav__socialLink">
                     <img src="/assets/images/icons/youtube.svg" alt="Youtube Icon">
                 </a>
             </li>
             <li class="headerNav__socialItem">
-                <a 
-                    href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ" 
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="headerNav__socialLink"
-                >
+                <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ"
+                    target="_blank" rel="noreferrer noopener" class="headerNav__socialLink">
                     <img src="/assets/images/icons/spotify.svg" alt="Spotify Icon">
                 </a>
             </li>
             <li class="headerNav__socialItem">
-                <a 
-                    href="https://music.apple.com/es/artist/alday/1215004420"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="headerNav__socialLink"
-                >
+                <a href="https://music.apple.com/es/artist/alday/1215004420" target="_blank" rel="noreferrer noopener"
+                    class="headerNav__socialLink">
                     <img src="/assets/images/icons/applemusic.svg" alt="Apple Music Icon">
                 </a>
             </li>
             <li class="headerNav__socialItem">
-                <a 
-                    href="https://https://www.instagram.com/aldaymusic/" 
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="headerNav__socialLink"
-                >
+                <a href="https://https://www.instagram.com/aldaymusic/" target="_blank" rel="noreferrer noopener"
+                    class="headerNav__socialLink">
                     <img src="/assets/images/icons/instagram.svg" alt="Instagram Icon">
                 </a>
             </li>
         </ul>
-        
+
     </nav>
 
-
-    <button 
-        class="header__menuToogle"
-        (click)="toggleMenu()"
-    >
+    @if(isCollapsed$ | async){
+    <button class="header__menuToogle" (click)="toggleMenu()">
         @if (menuOpen$ | async) {
-            <img
-                src="/assets/images/icons/menu-open.svg"
-                alt="Open menu icon"
-                class="menuToogle__openIcon"
-            >
+        <img src="/assets/images/icons/menu-open.svg" alt="Open menu icon" class="menuToogle__openIcon">
         }@else{
-            <img 
-                src="/assets/images/icons/menu-close.svg" 
-                alt="Close menu icon"
-                class="menuToogle__closeIcon"
-            >
+        <img src="/assets/images/icons/menu-close.svg" alt="Close menu icon" class="menuToogle__closeIcon">
         }
     </button>
+    }
+
 </header>
