@@ -1,0 +1,62 @@
+.app-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    height: 70px;
+}
+
+.header__brandLink{
+    height: fit-content;
+}
+
+.header__brandImage{
+    width: 100px;
+    vertical-align: middle;
+}
+
+.header__nav{
+    background-color: white;
+}
+
+.header__nav--closed{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: 0;
+    padding-right: 10%;
+    overflow: hidden;
+    transition: height .3s ease-in-out;
+}
+
+.header__nav--screen{
+    position: static;
+}
+
+.header__nav--opened{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: calc(100dvh - 70px);
+}
+
+.headerNav__pageList{
+    display: flex;
+    gap: 20px;
+    font-size: 2.8rem;
+    margin: 0 10px;
+}
+
+.headerNav__socialList{
+    display: flex;
+    gap: 20px;
+    font-size: 2.8rem;
+    margin: 0 10px;
+}
+
+
+.menuToggle__icon{
+    height: 52px;
+    scale: 1.2;
+}

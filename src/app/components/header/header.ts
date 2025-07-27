@@ -21,6 +21,7 @@ export class Header implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       const shouldCollpase = window.innerWidth < 800;
       this.menuService.setCollapsed(shouldCollpase);
+      this.menuService.closeMenu();
     }
   }
 

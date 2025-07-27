@@ -4,7 +4,11 @@
         <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__brandImage">
     </a>
 
-    <nav class="header__nav">
+    <nav 
+        class="header__nav header__nav--closed"
+        [class.header__nav--opened]="(menuOpen$ | async)"
+        [class.header__nav--screen]="!(isCollapsed$ | async)"
+    >
 
         <ul class="headerNav__pageList">
             <li class="headerNav__pageItem">
@@ -48,11 +52,20 @@
     </nav>
 
     @if(isCollapsed$ | async){
-    <button class="header__menuToogle" (click)="toggleMenu()">
+    <button class="header__menuToggle" (click)="toggleMenu()">
         @if (menuOpen$ | async) {
-        <img src="/assets/images/icons/menu-open.svg" alt="Open menu icon" class="menuToogle__openIcon">
+        <img 
+            src="/assets/images/icons/menu-close.svg" 
+            lt="Close menu icon" 
+            class="menuToggle__icon menuToggle__icon--close"
+            [class.menuToggle__collapsedIcon]="!(menuOpen$ | async)"
+        >
         }@else{
-        <img src="/assets/images/icons/menu-close.svg" alt="Close menu icon" class="menuToogle__closeIcon">
+        <img 
+            src="/assets/images/icons/menu-open.svg" 
+            alt="Open menu icon" 
+            class="menuToggle__icon menuToggle__icon--open"
+        >
         }
     </button>
     }
