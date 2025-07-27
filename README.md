@@ -4,6 +4,7 @@
 * Configuración de estilos globales iniciales
 * Disposición de componentes iniciales (header, footer, main)
 * Disposición de páginas iniciales (home, videos, about...)
+* Creación de projects-data.json con información sobre los trabajos
 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
