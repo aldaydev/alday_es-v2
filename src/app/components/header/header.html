@@ -1,6 +1,65 @@
 <header class="app-header">
-    <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__image">
-    <nav>
-        <a>Trabajos</a>
+
+    <a routerLink="/" class="header__brandLink">
+        <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__brandImage">
+    </a>
+    
+    <nav class="header__nav">
+
+        <ul class="headerNav__pageList">
+            <li class="headerNav__pageItem">
+                <a routerLink="/trabajos" class="headerNav__pageLink">TRABAJOS</a>
+            </li>
+            <li class="headerNav__pageItem">
+                <a routerLink="/videos" class="headerNav__pageLink">VÍDEOS</a>
+            </li>
+            <li class="headerNav__pageItem">
+                <a routerLink="/bio" class="headerNav__pageLink">BIO</a>
+            </li>
+        </ul>
+
+        <ul class="headerNav__socialList">
+            <li class="headerNav__socialItem">
+                <a 
+                    href="https://youtube.com/@aldaymusic"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="headerNav__socialLink"
+                >
+                    <img src="/assets/images/icons/youtube.svg" alt="Youtube Icon">
+                </a>
+            </li>
+            <li class="headerNav__socialItem">
+                <a 
+                    href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ" 
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="headerNav__socialLink"
+                >
+                    <img src="/assets/images/icons/spotify.svg" alt="Spotify Icon">
+                </a>
+            </li>
+            <li class="headerNav__socialItem">
+                <a 
+                    href="https://music.apple.com/es/artist/alday/1215004420"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="headerNav__socialLink"
+                >
+                    <img src="/assets/images/icons/applemusic.svg" alt="Apple Music Icon">
+                </a>
+            </li>
+            <li class="headerNav__socialItem">
+                <a 
+                    href="https://https://www.instagram.com/aldaymusic/" 
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="headerNav__socialLink"
+                >
+                    <img src="/assets/images/icons/instagram.svg" alt="Instagram Icon">
+                </a>
+            </li>
+        </ul>
+        
     </nav>
 </header>
