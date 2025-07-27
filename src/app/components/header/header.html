@@ -62,4 +62,24 @@
         </ul>
         
     </nav>
+
+
+    <button 
+        class="header__menuToogle"
+        (click)="toggleMenu()"
+    >
+        @if (menuOpen$ | async) {
+            <img
+                src="/assets/images/icons/menu-open.svg"
+                alt="Open menu icon"
+                class="menuToogle__openIcon"
+            >
+        }@else{
+            <img 
+                src="/assets/images/icons/menu-close.svg" 
+                alt="Close menu icon"
+                class="menuToogle__closeIcon"
+            >
+        }
+    </button>
 </header>
