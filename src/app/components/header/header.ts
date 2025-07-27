@@ -19,7 +19,7 @@ export class Header implements OnInit, OnDestroy {
 
   private resizeObserver = () => {
     if (isPlatformBrowser(this.platformId)) {
-      const shouldCollpase = window.innerWidth < 800;
+      const shouldCollpase = window.innerWidth < 1024;
       this.menuService.setCollapsed(shouldCollpase);
       this.menuService.closeMenu();
     }
@@ -35,9 +35,12 @@ export class Header implements OnInit, OnDestroy {
   }
 
   toggleMenu() {
-    this.menuService.toggleMenu(); // Llama al método del servicio
+    this.menuService.toggleMenu();
   }
 
+  closeMenu() {
+    this.menuService.closeMenu();
+  }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {

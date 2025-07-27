@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10%;
+    padding: 10px var(--res-padding);
     height: 70px;
 }
 
@@ -20,25 +20,29 @@
     background-color: white;
 }
 
-.header__nav--closed{
+.header__nav--mobile{
     position: absolute;
     top: 100%;
     right: 0;
     height: 0;
-    padding-right: 10%;
+    padding: 0 var(--res-padding);
+    
     overflow: hidden;
     transition: height .3s ease-in-out;
 }
 
 .header__nav--screen{
     position: static;
+    top: 0;
+    right: 0;
 }
 
 .header__nav--opened{
     position: absolute;
+    width: 100%;
     top: 100%;
     right: 0;
-    height: calc(100dvh - 70px);
+    height: auto;
 }
 
 .headerNav__pageList{
@@ -46,6 +50,14 @@
     gap: 20px;
     font-size: 2.8rem;
     margin: 0 10px;
+}
+
+.headerNav__pageList--mobile{
+    font-size: 3.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .headerNav__socialList{

@@ -5,30 +5,31 @@
     </a>
 
     <nav 
-        class="header__nav header__nav--closed"
+        class="header__nav"
         [class.header__nav--opened]="(menuOpen$ | async)"
         [class.header__nav--screen]="!(isCollapsed$ | async)"
+        [class.header__nav--mobile]="(isCollapsed$ | async)"
     >
 
-        <ul class="headerNav__pageList">
+        <ul 
+            class="headerNav__pageList"
+            [class.headerNav__pageList--opened]="(menuOpen$ | async)"
+            [class.headerNav__pageList--closed]="!(menuOpen$ | async)"
+            [class.headerNav__pageList--mobile]="(isCollapsed$ | async)"
+        >
             <li class="headerNav__pageItem">
-                <a routerLink="/trabajos" class="headerNav__pageLink">TRABAJOS</a>
+                <a routerLink="/trabajos" class="headerNav__pageLink" (click)="closeMenu()">TRABAJOS</a>
             </li>
             <li class="headerNav__pageItem">
-                <a routerLink="/videos" class="headerNav__pageLink">VÍDEOS</a>
+                <a routerLink="/videos" class="headerNav__pageLink" (click)="closeMenu()">VÍDEOS</a>
             </li>
             <li class="headerNav__pageItem">
-                <a routerLink="/bio" class="headerNav__pageLink">BIO</a>
+                <a routerLink="/bio" class="headerNav__pageLink" (click)="closeMenu()">BIO</a>
             </li>
         </ul>
 
         <ul class="headerNav__socialList">
-            <li class="headerNav__socialItem">
-                <a href="https://youtube.com/@aldaymusic" target="_blank" rel="noreferrer noopener"
-                    class="headerNav__socialLink">
-                    <img src="/assets/images/icons/youtube.svg" alt="Youtube Icon">
-                </a>
-            </li>
+            
             <li class="headerNav__socialItem">
                 <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ"
                     target="_blank" rel="noreferrer noopener" class="headerNav__socialLink">
@@ -39,6 +40,12 @@
                 <a href="https://music.apple.com/es/artist/alday/1215004420" target="_blank" rel="noreferrer noopener"
                     class="headerNav__socialLink">
                     <img src="/assets/images/icons/applemusic.svg" alt="Apple Music Icon">
+                </a>
+            </li>
+            <li class="headerNav__socialItem">
+                <a href="https://youtube.com/@aldaymusic" target="_blank" rel="noreferrer noopener"
+                    class="headerNav__socialLink">
+                    <img src="/assets/images/icons/youtube.svg" alt="Youtube Icon">
                 </a>
             </li>
             <li class="headerNav__socialItem">
