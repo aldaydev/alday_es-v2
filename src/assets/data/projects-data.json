@@ -24,5 +24,31 @@
             "amazon": "https://music.amazon.es/albums/B0DDX3HV4S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_JVLqpjcJEAyZlDCGZKvqPINLc"
         },
         "cover": "assets/images/projects/portada_elucubraciones_350px.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Una victoria, mil derrotas",
+        "type": "LP",
+        "year": 2022,
+        "links": {
+            "spotify": "https://open.spotify.com/album/3HQRjLSWgpll7ftyER7ju1?si=_TUGad7-Tl2ltykyp318gQ",
+            "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcKZZutdVK4eC_rqyWkOUUok&si=nxtuGGeEoHMYI-k5",
+            "apple": "https://music.apple.com/es/album/una-victoria-mil-derrotas/1766851847",
+            "amazon": "https://music.amazon.es/albums/B0DDX6P5TZ?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_WgQGgIvXBHhHFZUFnyZiD67oq"
+        },
+        "cover": "assets/images/projects/portada_uvmd_350px.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Stream Sessions",
+        "type": "EP",
+        "year": 2024,
+        "links": {
+            "spotify": "https://open.spotify.com/album/2ADKwpfaifRfpXpRMW3wwQ?si=R-LSCKnmSxaMx-kQp9Ehdg",
+            "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcKP6zpex7S2ohfVnXlAcQEO&si=C2gT-guv-BX5mhL8",
+            "apple": "https://music.apple.com/es/album/stream-sessions-ep/1775797161",
+            "amazon": "https://music.amazon.es/albums/B0DF2Y86B3?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_2fX8WZkknltc1hcrUDkowJJ7Q"
+        },
+        "cover": "assets/images/projects/portada_stream-sessions_350px.jpg"
     }
 ]
