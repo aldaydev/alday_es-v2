@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "La Jungla (o mirar atrás)",
+        "type": "EP",
+        "year": 2017,
+        "links": {
+            "spotify": "https://open.spotify.com/album/5sg4ZPdveJ4NtbfincEhB0?si=HG4mwVGuQeauCvq_wdeTVg",
+            "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcIE9ItYNxCYVXAZR-hDBSYS&si=dGss7TJ6_iwKane5",
+            "apple": "https://music.apple.com/es/album/la-jungla-o-mirar-atr%C3%A1s-ep/1766850534",
+            "amazon": "https://music.amazon.es/albums/B0DDX7F5SS?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_rSXc96xRbbHosWIEkrdoh4kUW"
+        },
+        "cover": "assets/images/projects/portada_la-jungla_350px.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Elucubraciones",
+        "type": "EP",
+        "year": 2018,
+        "links": {
+            "spotify": "https://open.spotify.com/album/37ba2qMsNVTXMTP9K9Yx94?si=zNMeBkP6ToCPTY_dKjLcfw",
+            "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcL1wVPDhQAN8hdmwN8lfikl&si=-UfUcaH0nB2A05nz",
+            "apple": "https://music.apple.com/es/album/elucubraciones-versi%C3%B3n-extendida-ep/1773199838",
+            "amazon": "https://music.amazon.es/albums/B0DDX3HV4S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_JVLqpjcJEAyZlDCGZKvqPINLc"
+        },
+        "cover": "assets/images/projects/portada_elucubraciones_350px.jpg"
+    }
+]
