@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/header
+* Creación del header (links, socials...)
+
 ## chore/routes
 * Condifuración de las rutas iniciales
 
