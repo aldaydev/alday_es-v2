@@ -1,19 +1,16 @@
 <header 
     class="app-header" 
-    [class.color--trans]="(bgColor === 'transparent')"
-    [class.color--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
+    [class.bgColor--trans]="(bgColor === 'transparent')"
+    [class.bgColor--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
 >
-
-    <a routerLink="/" class="header__brandLink">
-        <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__brandImage">
-    </a>
+    <app-logo [color]="elementsColor"></app-logo>
 
     <nav 
         class="header__nav"
         [class.header__nav--opened]="(menuOpen$ | async)"
         [class.header__nav--screen]="!(isCollapsed$ | async)"
         [class.header__nav--mobile]="(isCollapsed$ | async)"
-        [class.color--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
+        [class.bgColor--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
     >
 
         <ul 
@@ -22,58 +19,31 @@
             [class.headerNav__pageList--closed]="!(menuOpen$ | async)"
             [class.headerNav__pageList--mobile]="(isCollapsed$ | async)"
         >
-            <li class="headerNav__pageItem">
+            <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
                 <a routerLink="/trabajos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">TRABAJOS</a>
             </li>
-            <li class="headerNav__pageItem">
+            <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
                 <a routerLink="/videos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">VÍDEOS</a>
             </li>
-            <li class="headerNav__pageItem">
+            <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
                 <a routerLink="/bio" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">BIO</a>
             </li>
         </ul>
 
         <app-nav-icons [color]="elementsColor"></app-nav-icons>
 
-        <!-- <ul class="headerNav__socialList">
-            
-            <li class="headerNav__socialItem">
-                <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ"
-                    target="_blank" rel="noreferrer noopener" class="headerNav__socialLink">
-                    <img src="/assets/images/icons/spotify.svg" alt="Spotify Icon" class="headerNav__socialIcon">
-                </a>
-            </li>
-            <li class="headerNav__socialItem">
-                <a href="https://music.apple.com/es/artist/alday/1215004420" target="_blank" rel="noreferrer noopener"
-                    class="headerNav__socialLink">
-                    <img src="/assets/images/icons/applemusic.svg" alt="Apple Music Icon" class="headerNav__socialIcon">
-                </a>
-            </li>
-            <li class="headerNav__socialItem">
-                <a href="https://youtube.com/@aldaymusic" target="_blank" rel="noreferrer noopener"
-                    class="headerNav__socialLink">
-                    <img src="/assets/images/icons/youtube.svg" alt="Youtube Icon" class="headerNav__socialIcon">
-                </a>
-            </li>
-            <li class="headerNav__socialItem">
-                <a href="https://https://www.instagram.com/aldaymusic/" target="_blank" rel="noreferrer noopener"
-                    class="headerNav__socialLink">
-                    <img src="/assets/images/icons/instagram.svg" alt="Instagram Icon" class="headerNav__socialIcon">
-                </a>
-            </li>
-        </ul> -->
-
     </nav>
 
     @if(isCollapsed$ | async){
     <button class="header__menuToggle" (click)="toggleMenu()">
         @if (menuOpen$ | async) {
-        <img 
+        <!-- <img 
             src="/assets/images/icons/menu-close.svg" 
             lt="Close menu icon" 
             class="menuToggle__icon menuToggle__icon--close"
             [class.menuToggle__collapsedIcon]="!(menuOpen$ | async)"
-        >
+        > -->
+        <svg xmlns="http://www.w3.org/2000/svg" height="52px" viewBox="0 -960 960 960" width="52px"><path d="M256-192.35 192.35-256l224-224-224-224L256-767.65l224 224 224-224L767.65-704l-224 224 224 224L704-192.35l-224-224-224 224Z"/></svg>
         }@else{
         <img 
             src="/assets/images/icons/menu-open.svg" 

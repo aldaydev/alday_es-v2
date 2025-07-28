@@ -5,10 +5,11 @@ import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe, isPlatformBrowser } from '@angular/common';
 import { NavIcons } from '../nav-icons/nav-icons';
+import { Logo } from "../logo/logo";
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule, AsyncPipe, NavIcons],
+  imports: [RouterModule, AsyncPipe, NavIcons, Logo],
   templateUrl: './header.html',
   styleUrls: ['./header.css']
 })
@@ -25,7 +26,6 @@ export class Header implements OnInit, OnDestroy {
       const shouldCollpase = window.innerWidth < 1024;
       this.menuService.setCollapsed(shouldCollpase);
       this.menuService.closeMenu();
-      this.elementsColor = '#000000';
     }
   }
 
@@ -55,6 +55,9 @@ export class Header implements OnInit, OnDestroy {
 
   toggleMenu() {
     this.menuService.toggleMenu();
+    if(this.menuOpen$){
+      this.scrolledColor();
+    }
   }
 
   closeMenu() {

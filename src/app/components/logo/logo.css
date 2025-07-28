@@ -1,0 +1,21 @@
+.header__brandLink{
+    height: fit-content;
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__brandLink svg {
+    pointer-events: none;
+}
+
+.logo-transition{
+    transition: fill 0.3s ease-in-out;
+}
+
+.letterHover:hover{
+    /* fill: rgb(216, 165, 25); */
+    scale: 1.05;
+    transition: scale .3s ease-in-out;
+}
