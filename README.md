@@ -2,6 +2,8 @@
 
 ## feat/header
 * Creación del header (links, socials...)
+* Gestión del servicio MenuService para estado del menu
+* Gestión de modo responsive
 
 ## chore/routes
 * Condifuración de las rutas iniciales
