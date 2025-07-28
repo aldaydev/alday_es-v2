@@ -1,4 +1,8 @@
-<header class="app-header">
+<header 
+    class="app-header" 
+    [class.header--trans]="(bgColor === 'transparent')"
+    [class.header--white]="(bgColor === '#ffffff')"
+>
 
     <a routerLink="/" class="header__brandLink">
         <img src="/assets/images/brand/logo-alday.png" alt="Logotipo de Alday" class="header__brandImage">
@@ -28,7 +32,9 @@
             </li>
         </ul>
 
-        <ul class="headerNav__socialList">
+        <app-nav-icons [color]="elementsColor"></app-nav-icons>
+
+        <!-- <ul class="headerNav__socialList">
             
             <li class="headerNav__socialItem">
                 <a href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=RXAVeR4NS0u_0sKFoeuOtQ"
@@ -54,7 +60,7 @@
                     <img src="/assets/images/icons/instagram.svg" alt="Instagram Icon" class="headerNav__socialIcon">
                 </a>
             </li>
-        </ul>
+        </ul> -->
 
     </nav>
 

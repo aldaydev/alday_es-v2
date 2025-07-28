@@ -10,8 +10,17 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100dvw;
-    background-color: white;
+    /* background-color: white; */
     z-index: 999;
+    transition: background .3s ease-in-out;
+}
+
+.header--trans{
+    background-color: transparent;
+}
+
+.header--white{
+    background-color: white;
 }
 
 /* BRAND SECTION */
@@ -27,9 +36,9 @@
 
 /* NAV SECTION */
 
-.header__nav{
+/* .header__nav{
     background-color: white;
-}
+} */
 
 .header__nav--mobile{
     position: absolute;
@@ -112,18 +121,7 @@
     align-items: center;
 }
 
-.headerNav__socialList{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 2.8rem;
-    margin: 0 10px;
-}
 
-.headerNav__socialLink{
-    display: flex;
-    align-items: center;
-}
 
 .menuToggle__icon{
     height: 52px;
@@ -145,10 +143,3 @@
     background-color: black;
 }
 
-.headerNav__socialIcon{
-    transition: scale .2s ease-in-out;
-}
-
-.headerNav__socialLink:hover .headerNav__socialIcon{
-    scale: 1.1;
-}

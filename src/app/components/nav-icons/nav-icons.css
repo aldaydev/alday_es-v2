@@ -1,0 +1,29 @@
+.headerNav__socialList{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 2.8rem;
+    margin: 0 10px;
+}
+
+.headerNav__socialLink{
+    display: flex;
+    align-items: center;
+}
+
+.headerNav__socialIcon,
+spotify-icon{
+    display: flex;
+    align-items: center;
+    transition: scale .2s ease-in-out;
+}
+
+
+.headerNav__socialLink:hover .headerNav__socialIcon,
+.headerNav__socialLink:hover spotify-icon{
+    scale: 1.1;
+}
+
+.icon-transition{
+    transition: fill 0.3s ease-in-out;
+}
