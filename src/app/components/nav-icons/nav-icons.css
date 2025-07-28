@@ -9,18 +9,11 @@
 .headerNav__socialLink{
     display: flex;
     align-items: center;
-}
-
-.headerNav__socialIcon,
-spotify-icon{
-    display: flex;
-    align-items: center;
     transition: scale .2s ease-in-out;
 }
 
 
-.headerNav__socialLink:hover .headerNav__socialIcon,
-.headerNav__socialLink:hover spotify-icon{
+.headerNav__socialLink:hover{
     scale: 1.1;
 }
 

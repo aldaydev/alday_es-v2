@@ -15,11 +15,11 @@
     transition: background .3s ease-in-out;
 }
 
-.header--trans{
+.color--trans{
     background-color: transparent;
 }
 
-.header--white{
+.color--white{
     background-color: white;
 }
 
@@ -37,7 +37,7 @@
 /* NAV SECTION */
 
 /* .header__nav{
-    background-color: white;
+    transition: background .3s ease-in-out;
 } */
 
 .header__nav--mobile{
@@ -48,7 +48,7 @@
     padding: 0 var(--res-padding);
     
     overflow: hidden;
-    transition: height .3s ease-in-out;
+    transition: height .3s ease-in-out, background .3s ease-in-out;
 }
 
 .header__nav--screen{

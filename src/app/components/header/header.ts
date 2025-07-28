@@ -25,6 +25,7 @@ export class Header implements OnInit, OnDestroy {
       const shouldCollpase = window.innerWidth < 1024;
       this.menuService.setCollapsed(shouldCollpase);
       this.menuService.closeMenu();
+      this.elementsColor = '#000000';
     }
   }
 
@@ -33,7 +34,9 @@ export class Header implements OnInit, OnDestroy {
       const shouldChange = window.scrollY > 0;
       if(shouldChange){
         this.menuService.closeMenu();
-        this.scrolledColor();
+        if(this.menuOpen$){
+          this.scrolledColor();
+        }
       }else{
         this.menuService.closeMenu();
         this.initialColor();
@@ -80,7 +83,7 @@ export class Header implements OnInit, OnDestroy {
   }
 
   initialColor() {
-    this.bgColor = '#000000';
+    this.bgColor = 'transparent';
     this.elementsColor = '#ffffff';
   }
 

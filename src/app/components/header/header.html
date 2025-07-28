@@ -1,7 +1,7 @@
 <header 
     class="app-header" 
-    [class.header--trans]="(bgColor === 'transparent')"
-    [class.header--white]="(bgColor === '#ffffff')"
+    [class.color--trans]="(bgColor === 'transparent')"
+    [class.color--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
 >
 
     <a routerLink="/" class="header__brandLink">
@@ -13,6 +13,7 @@
         [class.header__nav--opened]="(menuOpen$ | async)"
         [class.header__nav--screen]="!(isCollapsed$ | async)"
         [class.header__nav--mobile]="(isCollapsed$ | async)"
+        [class.color--white]="(bgColor === '#ffffff') || (menuOpen$ | async)"
     >
 
         <ul 
