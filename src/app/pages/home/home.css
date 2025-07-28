@@ -1,0 +1,9 @@
+.spotlight {
+    overflow: hidden;
+    height: calc(100dvh);
+}
+
+.spotlight__image {
+    width: 100%;
+    height: auto;
+}

@@ -1,5 +1,5 @@
 .app-main{
-    background-color: var(--color-primary);
     color: white;
-    padding: 30px var(--res-padding);
+    margin-top: 70px;
+    /* padding: 30px var(--res-padding); */
 }
