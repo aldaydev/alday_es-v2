@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/home
+* Estética del home
+
 ## feat/header
 * Creación del header (links, socials...)
 * Gestión del servicio MenuService para estado del menu
