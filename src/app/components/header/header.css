@@ -66,7 +66,9 @@
     position: absolute;
     top: 100%;
     right: 0;
-    height: 55dvh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .header__nav--opened .headerNav__socialIcon{
