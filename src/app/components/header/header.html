@@ -20,13 +20,19 @@
             [class.headerNav__pageList--mobile]="(isCollapsed$ | async)"
         >
             <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
-                <a routerLink="/trabajos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">TRABAJOS</a>
+                <a routerLink="/trabajos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">TRABAJOS 
+                    <span class="headerNav__pageLink--hover" [class.bgColor--white]="(bgColor === 'transparent')" [class.bgColor--black]="(bgColor !== 'transparent')"></span>
+                </a>
             </li>
             <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
-                <a routerLink="/videos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">VÍDEOS</a>
+                <a routerLink="/videos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">VÍDEOS
+                    <span class="headerNav__pageLink--hover" [class.bgColor--white]="(bgColor === 'transparent')" [class.bgColor--black]="(bgColor !== 'transparent')"></span>
+                </a>
             </li>
             <li class="headerNav__pageItem" [class.color--white]="(bgColor === 'transparent')">
-                <a routerLink="/bio" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">BIO</a>
+                <a routerLink="/bio" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">BIO
+                    <span class="headerNav__pageLink--hover" [class.bgColor--white]="(bgColor === 'transparent')" [class.bgColor--black]="(bgColor !== 'transparent')"></span>
+                </a>
             </li>
         </ul>
 
@@ -43,13 +49,14 @@
             class="menuToggle__icon menuToggle__icon--close"
             [class.menuToggle__collapsedIcon]="!(menuOpen$ | async)"
         > -->
-        <svg xmlns="http://www.w3.org/2000/svg" height="52px" viewBox="0 -960 960 960" width="52px"><path d="M256-192.35 192.35-256l224-224-224-224L256-767.65l224 224 224-224L767.65-704l-224 224 224 224L704-192.35l-224-224-224 224Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="52px" viewBox="0 -960 960 960" width="52px"><path d="M256-192.35 192.35-256l224-224-224-224L256-767.65l224 224 224-224L767.65-704l-224 224 224 224L704-192.35l-224-224-224 224Z"/></svg>
         }@else{
-        <img 
+            <svg xmlns="http://www.w3.org/2000/svg" height="52px" [attr.fill]="elementsColor" viewBox="0 -960 960 960" width="52px"><path d="M111.87-228.28v-91h736.26v91H111.87Zm0-206.22v-91h736.26v91H111.87Zm0-206.22v-91h736.26v91H111.87Z"/></svg>
+        <!-- <img 
             src="/assets/images/icons/menu-open.svg" 
             alt="Open menu icon" 
             class="menuToggle__icon menuToggle__icon--open"
-        >
+        > -->
         }
     </button>
     }

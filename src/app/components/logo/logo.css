@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: scale .3s ease-in-out;
 }
 
 .header__brandLink svg {
@@ -14,8 +15,8 @@
     transition: fill 0.3s ease-in-out;
 }
 
-.letterHover:hover{
+.header__brandLink:hover{
     /* fill: rgb(216, 165, 25); */
     scale: 1.05;
-    transition: scale .3s ease-in-out;
+    
 }

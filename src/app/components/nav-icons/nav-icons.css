@@ -1,6 +1,7 @@
 .headerNav__socialList{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     font-size: 2.8rem;
     margin: 0 10px;
@@ -17,6 +18,43 @@
     scale: 1.1;
 }
 
+.youtube-icon{
+    height: 32px;
+}
+
+.spotify-icon,
+.apple-icon,
+.instagram-icon{
+    height: 25px;
+}
+
 .icon-transition{
     transition: fill 0.3s ease-in-out;
 }
+
+
+@media screen and (max-width: 1024px) {
+    .headerNav__socialList{
+        gap: 50px;
+    }
+
+    .youtube-icon{
+        height: 47px;
+    }
+
+    .spotify-icon,
+    .apple-icon,
+    .instagram-icon{
+        height: 37px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .headerNav__socialList{
+        justify-content: center;
+        gap: 10%;
+    }
+}
+
+
+

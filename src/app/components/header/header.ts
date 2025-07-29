@@ -18,6 +18,8 @@ export class Header implements OnInit, OnDestroy {
   menuOpen$!: Observable<boolean>;
   isCollapsed$!: Observable<boolean>;
 
+  isOnTop: boolean = true;
+
   bgColor: string = 'transparent';
   elementsColor: string = '#ffffffff';
 
@@ -33,6 +35,7 @@ export class Header implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       const shouldChange = window.scrollY > 0;
       if(shouldChange){
+        this.isOnTop = false;
         this.menuService.closeMenu();
         if(this.menuOpen$){
           this.scrolledColor();
@@ -57,11 +60,16 @@ export class Header implements OnInit, OnDestroy {
     this.menuService.toggleMenu();
     if(this.menuOpen$){
       this.scrolledColor();
+    }else if(!this.menuOpen$ && this.isOnTop){
+      this.initialColor();
     }
   }
 
   closeMenu() {
     this.menuService.closeMenu();
+    if(!this.isOnTop){
+      this.initialColor();
+    }
   }
 
   ngOnInit() {
