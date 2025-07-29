@@ -1,7 +1,7 @@
 # AldayEsV2
 
 ## feat/home
-* Estética del home
+* Creación del componente animatedLogo
 
 ## feat/header
 * Creación del header (links, socials...)
