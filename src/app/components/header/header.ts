@@ -1,5 +1,5 @@
 
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
@@ -9,67 +9,68 @@ import { Logo } from "../logo/logo";
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule, AsyncPipe, NavIcons, Logo],
+  imports: [RouterModule, NavIcons, Logo],
   templateUrl: './header.html',
-  styleUrls: ['./header.css']
+  styleUrl: './header.css'
 })
 export class Header implements OnInit, OnDestroy {
 
-  menuOpen$!: Observable<boolean>;
-  isCollapsed$!: Observable<boolean>;
+  // this.menuService.menuStateSignal();
+  // menuOpen$!: Observable<boolean>;
+  // isCollapsed$!: Observable<boolean>;
 
-  isOnTop: boolean = true;
+  // isOnTop: boolean = true;
 
-  bgColor: string = 'transparent';
-  elementsColor: string = '#ffffffff';
+  isOnTop = signal<boolean>(true);
+
+  bgColor = signal<string>('transparent');
+  elementsColor = signal<string>('#ffffff');
 
   private resizeObserver = () => {
     if (isPlatformBrowser(this.platformId)) {
       const shouldCollpase = window.innerWidth < 1024;
       this.menuService.setCollapsed(shouldCollpase);
       this.menuService.closeMenu();
+      this.initialColor();
     }
   }
 
   private scrollObserver = () => {
     if (isPlatformBrowser(this.platformId)) {
-      const shouldChange = window.scrollY > 0;
-      if(shouldChange){
-        this.isOnTop = false;
+      this.isOnTop.set(!(window.scrollY > 0));
+      if(!this.isOnTop()){
+        this.scrolledColor();
         this.menuService.closeMenu();
-        if(this.menuOpen$){
-          this.scrolledColor();
-        }
+        console.log('is NOT on top');
       }else{
-        this.menuService.closeMenu();
         this.initialColor();
+        this.menuService.closeMenu();
+        console.log('is on top');
       }
     }
   }
 
 
   constructor(
-    private menuService: MenuService,
+    public menuService: MenuService,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    this.menuOpen$ = this.menuService.menuState$;
-    this.isCollapsed$ = this.menuService.isCollapsed$;
-  }
+  ) {}
 
   toggleMenu() {
     this.menuService.toggleMenu();
-    if(this.menuOpen$){
+    if(this.menuService.menuStateSignal()){
       this.scrolledColor();
-    }else if(!this.menuOpen$ && this.isOnTop){
+    }else if(this.isOnTop()){
       this.initialColor();
     }
   }
 
   closeMenu() {
     this.menuService.closeMenu();
-    if(!this.isOnTop){
+    if(!this.isOnTop()){
       this.initialColor();
     }
+
   }
 
   ngOnInit() {
@@ -85,17 +86,18 @@ export class Header implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (isPlatformBrowser(this.platformId)) {
       window.removeEventListener('resize', this.resizeObserver);
+      window.removeEventListener('scroll', this.scrollObserver);
     }
   }
 
   scrolledColor() {
-    this.elementsColor = '#000000';
-    this.bgColor = '#ffffff';
+    this.elementsColor.set('#000000');
+    this.bgColor.set('#ffffff');
   }
 
   initialColor() {
-    this.bgColor = 'transparent';
-    this.elementsColor = '#ffffff';
+    this.bgColor.set('transparent');
+    this.elementsColor.set('#ffffff');
   }
 
 }

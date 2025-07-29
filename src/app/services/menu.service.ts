@@ -1,31 +1,29 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
-  private menuState = new BehaviorSubject<boolean>(false);
-  public menuState$ = this.menuState.asObservable();
+  private menuState = signal<boolean>(false);
+  public menuStateSignal = this.menuState;
 
-  private isCollapsed = new BehaviorSubject<boolean>(true);
-  public isCollapsed$ = this.isCollapsed.asObservable();
+  private isCollapsed = signal<boolean>(true);
+  public isCollapsedSignal = this.isCollapsed;
 
   openMenu() {
-    this.menuState.next(true);
+    this.menuState.set(true);
   }
 
   closeMenu() {
-    this.menuState.next(false);
+    this.menuState.set(false);
   }
 
   toggleMenu() {
-    const currentState = this.menuState.getValue();
-    this.menuState.next(!currentState);
+    this.menuState.update((current) => !current);
   }
 
   setCollapsed(collapseState: boolean) {
-    this.isCollapsed.next(collapseState)
+    this.isCollapsed.set(collapseState);
   }
 }

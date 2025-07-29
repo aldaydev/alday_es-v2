@@ -1,7 +1,7 @@
 # AldayEsV2
 
-## feat/home
-* Estética del home
+## feat/header-signals
+* Cambio de observables por signals en menuservice
 
 ## feat/header
 * Creación del header (links, socials...)
