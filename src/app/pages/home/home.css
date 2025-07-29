@@ -43,6 +43,7 @@
 .spotlight__title{
     text-align: center;
     text-wrap: balance;
+    animation: slide-in-up .3s ease-in-out 1s both;
 }
 
 .spotlight__description{
@@ -52,6 +53,7 @@
     max-width: 800px;
     text-align: center;
     text-wrap: balance;
+    animation: slide-in-up .3s ease-in-out 1.2s both;
 }
 
 app-animated-logo{
@@ -63,5 +65,45 @@ app-animated-logo{
 }
 
 .spotlight__linkContainer{
-    margin-bottom: 100px;
+    /* margin: 0 80px 100px 80px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+    animation: slide-in-up .3s ease-in-out 1.3s both;
+}
+
+.spotlight__link{
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: scale .3s ease-in-out;
+    text-wrap: nowrap;
+}
+
+.spotlight__link:hover{
+    scale: 1.1;
+}
+
+.spotlight__link--spotify{
+    background-color: #3BE477;
+}
+
+.spotlight__link--apple{
+    background-color: #D60017;
+}
+
+.spotlight__link--youtube{
+    background-color: #FF0033;
+}
+
+
+@keyframes slide-in-up {
+    0%{
+        transform:translateY(20px);
+        opacity: 0;
+    }100%{
+        transform:translateY(0);
+        opacity: 1;
+    }
 }

@@ -19,19 +19,19 @@
 }
 
 .animationLetter-a1{
-    animation: pop-in .3s ease-in-out 0s both;
+    animation: pop-in .5s ease-in-out 0s both;
 }
 
 .animationLetter-l{
-    animation: pop-in .3s ease-in-out .2s both;
+    animation: pop-in .5s ease-in-out .2s both;
 }
 
 .animationLetter-d{
-    animation: pop-in .3s ease-in-out .4s both;
+    animation: pop-in .5s ease-in-out .4s both;
 }
 
 .animationLetter-a2{
-    animation: pop-in .3s ease-in-out .6s both;
+    animation: pop-in .5s ease-in-out .6s both;
 }
 
 .animationLetter-y{
