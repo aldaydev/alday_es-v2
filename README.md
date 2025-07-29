@@ -1,7 +1,12 @@
 # AldayEsV2
 
+<<<<<<< HEAD
 ## feat/home
 * Creación del componente animatedLogo
+=======
+## feat/header-signals
+* Cambio de observables por signals en menuservice
+>>>>>>> 4bb76d83bf89879093373a3c87129a9d03342d7f
 
 ## feat/header
 * Creación del header (links, socials...)
