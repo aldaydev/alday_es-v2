@@ -1,0 +1,49 @@
+.animatedLogo__outerContainer{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.animatedLogo__innerContainer{
+    /* max-width: 400px; */
+}
+
+.animationLetter-a1,
+.animationLetter-l,
+.animationLetter-d,
+.animationLetter-a2,
+.animationLetter-y{
+    scale: 0;
+    transform-origin: 50% 50%;
+}
+
+.animationLetter-a1{
+    animation: pop-in .3s ease-in-out 0s both;
+}
+
+.animationLetter-l{
+    animation: pop-in .3s ease-in-out .2s both;
+}
+
+.animationLetter-d{
+    animation: pop-in .3s ease-in-out .4s both;
+}
+
+.animationLetter-a2{
+    animation: pop-in .3s ease-in-out .6s both;
+}
+
+.animationLetter-y{
+    animation: pop-in .5s ease-in-out .8s both;
+}
+
+@keyframes pop-in {
+    0%{
+        scale: 0;
+    }85%{
+        scale: 1.1;
+    }100%{
+        scale: 1;
+    }
+}
