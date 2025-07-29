@@ -41,7 +41,7 @@
 }
 
 .header__nav{
-    transition: height .3s ease-in-out, background .3s .2s ease-in-out, padding .3s .3s ease-in-out;
+    transition: height .3s ease-in-out, background .3s .2s ease-in-out, padding .3s .3s ease-in-out, opacity .3s ease-in-out;
 }
 
 .header__nav--mobile{
@@ -73,6 +73,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
     transition: height .3s ease-in-out, background .3s ease-in-out, padding .3s 0s ease-in-out;
+}
+
+.header__nav--closed{
+    opacity: 0;
 }
 
 .header__nav--opened .headerNav__socialIcon{

@@ -8,6 +8,7 @@
     <nav 
         class="header__nav"
         [class.header__nav--opened]="menuService.menuStateSignal()"
+        [class.header__nav--closed]="!menuService.menuStateSignal()"
         [class.header__nav--screen]="!menuService.isCollapsedSignal()"
         [class.header__nav--mobile]="menuService.isCollapsedSignal()"
         [class.bgColor--white]="(bgColor() === '#ffffff') || menuService.menuStateSignal()"
