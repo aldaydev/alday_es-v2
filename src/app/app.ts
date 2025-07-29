@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
@@ -12,6 +12,9 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
+
+  @ViewChild(Header) headerComponent!: Header;
+
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
@@ -21,6 +24,7 @@ export class App {
       .subscribe(() => {
         if (isPlatformBrowser(this.platformId)) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          setTimeout(() => this.headerComponent.scrollObserver(), 100);
         }
       });
   }

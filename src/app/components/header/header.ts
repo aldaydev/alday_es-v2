@@ -35,7 +35,7 @@ export class Header implements OnInit, OnDestroy {
     }
   }
 
-  private scrollObserver = () => {
+  scrollObserver = () => {
     if (isPlatformBrowser(this.platformId)) {
       this.isOnTop.set(!(window.scrollY > 0));
       if(!this.isOnTop()){
