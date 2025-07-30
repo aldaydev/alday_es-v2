@@ -133,13 +133,27 @@ app-animated-logo{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10%;
+    column-gap: 70px;
+    row-gap: 40px;
 }
+
+.data__img{
+    min-width: 280px;
+}
+
+.data__title{
+    text-transform: uppercase;
+    /* text-align: center; */
+}
+
+/* .data__typeyear{
+    text-align: center;
+} */
 
 .data__links{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     margin-top: 20px;
 }
@@ -158,7 +172,7 @@ app-animated-logo{
     padding: 10px 30px;
     border-radius: 12px;
     transition: scale .3s ease-in-out;
-    min-width: 220px;
+    min-width: 280px;
 }
 
 .data__linkIcon{
