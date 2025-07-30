@@ -18,12 +18,50 @@
 <section id="last-project" class="home__lastProject">
     <h2 class="lastProject__title">ÚLTIMO TRABAJO</h2>
     <article class="lastProject__data">
-        <img [src]="lastProject?.cover" [alt]="'Portada de ' + lastProject?.name">
-        <div>
-            <h3>{{ lastProject?.name }}</h3>
-            <h3>
+        <img [src]="lastProject?.cover" [alt]="'Portada de ' + lastProject?.name" class="data__img">
+        <div class="data__infoContainer">
+            <h3 class="data__title">{{ lastProject?.name }}</h3>
+            <h3 class="data__typeyear">
                 {{ lastProject?.type + " - " + lastProject?.year }}
             </h3>
+            <div class="data__links">
+                <a 
+                    [href]="lastProject?.links?.youtube"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="data__link data__link--youtube"
+                >
+                    <span class="data__linkName">YOUTUBE</span>
+                    <img src="assets/images/icons/youtube-white.svg" class="data__linkIcon data__linkIcon--youtube">
+                </a>
+                <a 
+                    [href]="lastProject?.links?.spotify"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="data__link data__link--spotify"
+                >
+                    <span class="data__linkName">SPOTIFY</span>
+                    <img src="assets/images/icons/spotify-white.svg" class="data__linkIcon">
+                </a>
+                <a 
+                    [href]="lastProject?.links?.apple"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="data__link data__link--apple"
+                >
+                    <span class="data__linkName">APPLE MUSIC</span>
+                    <img src="assets/images/icons/applemusic-white.svg" class="data__linkIcon">
+                </a>
+                <a 
+                    [href]="lastProject?.links?.amazon"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="data__link data__link--amazon"
+                >
+                    <span class="data__linkName">AMAZON MUSIC</span>
+                    <img src="assets/images/icons/amazonmusic-white.svg" class="data__linkIcon">
+                </a>
+            </div>
         </div>
     </article>
 </section>

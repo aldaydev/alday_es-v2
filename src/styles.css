@@ -3,6 +3,11 @@
 :root{
     --color-primary: #00031B;
 
+    --color-youtube: #FF0033;
+    --color-spotify: #3BE477;
+    --color-apple: #D60017;
+    --color-amazon: #26D2DC;
+
     --res-padding: 15px;
 }
 
