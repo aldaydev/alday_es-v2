@@ -1,4 +1,4 @@
-<section class="spotlight">
+<header class="spotlight">
     <div class="overlay"></div>
     <article class="spotlight__info">
         <app-animated-logo></app-animated-logo>
@@ -9,6 +9,21 @@
             <a routerLink="trabajos" class="spotlight__link spotlight__link--spotify">SPOTIFY</a>
             <a routerLink="videos" class="spotlight__link spotlight__link--apple">APPLE MUSIC</a>
         </div>
+        <a href="#last-project" class="spotlight__arrowContainer">
+            <img src="/assets/images/icons/arrow_down.svg" alt="Icono flecha" class="spotlight__arrow"/>
+        </a>
     </article>
     <img src="/assets/images/brand/home_image.jpg" alt="Foto Alday">
+</header>
+<section id="last-project" class="home__lastProject">
+    <h2 class="lastProject__title">ÚLTIMO TRABAJO</h2>
+    <article class="lastProject__data">
+        <img [src]="lastProject?.cover" [alt]="'Portada de ' + lastProject?.name">
+        <div>
+            <h3>{{ lastProject?.name }}</h3>
+            <h3>
+                {{ lastProject?.type + " - " + lastProject?.year }}
+            </h3>
+        </div>
+    </article>
 </section>
