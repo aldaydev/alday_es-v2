@@ -1,5 +1,10 @@
 # AldayEsV2
 
+## feat/home-refactor
+* Refactorización del home y separación por componentes
+* Creación del componente home-spotligth
+* Creación del componente home-last-project
+
 ## feat/home
 * Creación del componente animatedLogo
 * Creación del header "spotlight"

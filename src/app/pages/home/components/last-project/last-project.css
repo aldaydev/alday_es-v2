@@ -1,0 +1,106 @@
+
+.home__lastProject{
+    color: black;
+    padding: 0 var(--res-padding);
+    margin: 40px 0;
+}
+
+.lastProject__title{
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lastProject__data{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 70px;
+    row-gap: 40px;
+}
+
+.data__img{
+    min-width: 280px;
+}
+
+.data__title{
+    text-transform: uppercase;
+    /* text-align: center; */
+}
+
+.data__links{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.data__linkName{
+    color: white;
+}
+
+
+.data__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 12px;
+    transition: scale .3s ease-in-out;
+    min-width: 280px;
+}
+
+
+.data__link--spotify{
+    background-color: var(--color-spotify);
+}
+
+.data__link--apple{
+    background-color: var(--color-apple);
+}
+
+.data__link--youtube{
+    background-color: var(--color-youtube);
+}
+
+.data__link--amazon{
+    background-color: var(--color-amazon);
+}
+
+.data__linkIcon{
+    height: 30px;
+}
+
+.data__linkIcon--youtube{
+    height: 35px;
+}
+
+.data__link:hover{
+    scale: 1.03;
+}
+
+.lastProject__seeAll{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lastProject__seeAllLink{
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 280px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+}
+
+.lastProject__seeAllLink:hover{
+    background-color: black;
+    color: white;
+}

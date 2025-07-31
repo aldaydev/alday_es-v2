@@ -1,0 +1,38 @@
+<header class="spotlight">
+    <div class="overlay"></div>
+    <article class="spotlight__info">
+        <app-animated-logo></app-animated-logo>
+        <h1 class="spotlight__title">MÚSICO Y STREAMER</h1>
+        <p class="spotlight__description">TE INVITO A VER MIS TRABAJOS MUSICALES Y VIDEOCLIPS</p>
+        <div class="spotlight__linkContainer">
+            <a 
+                href="https://youtube.com/@aldaymusic"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="spotlight__link spotlight__link--youtube"
+            >
+                    YOUTUBE
+            </a>
+            <a 
+                href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=00b1YqmyTcutaJSVR7Tm4g"
+                target="_blank"
+                rel="noreferrer noopener" 
+                class="spotlight__link spotlight__link--spotify"
+            >
+                SPOTIFY
+            </a>
+            <a 
+                href="https://music.apple.com/es/artist/alday/1215004420"
+                target="_blank"
+                rel="noreferrer noopener" 
+                class="spotlight__link spotlight__link--apple"
+            >
+                APPLE MUSIC
+            </a>
+        </div>
+        <a (click)="scrollToFragment('last-project')" class="spotlight__arrowContainer">
+            <img src="/assets/images/icons/arrow_down.svg" alt="Icono flecha" class="spotlight__arrow"/>
+        </a>
+    </article>
+    <img src="/assets/images/brand/home_image.jpg" alt="Foto Alday">
+</header>

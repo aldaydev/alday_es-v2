@@ -1,5 +1,5 @@
 
-/* VARIABLES */
+/* ---------- VARIABLES ---------- */
 :root{
     --color-primary: #00031B;
 
@@ -10,6 +10,8 @@
 
     --res-padding: 15px;
 }
+
+/* ---------- RESPONSIVE PADDING MEDIA QUERIES ---------- */
 
 @media screen and (min-width: 500px) {
     :root{
@@ -35,7 +37,7 @@
     }
 }
 
-/* ESTILOS GLOBALES */
+/* ---------- ESTILOS GLOBALES ---------- */
 
 *{
     margin: 0;
@@ -43,6 +45,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 
 a:visited{
@@ -72,4 +75,26 @@ body{
 app-root{
     display: grid;
     grid-template-rows: auto 1fr auto;
+}
+
+/* ---------- ANIMACIONES ---------- */
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(20px);
+    }100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-up {
+    0%{
+        transform:translateY(20px);
+        opacity: 0;
+    }100%{
+        transform:translateY(0);
+        opacity: 1;
+    }
 }
