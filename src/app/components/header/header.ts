@@ -30,7 +30,12 @@ export class Header implements OnInit, OnDestroy {
       const shouldCollpase = window.innerWidth < 1024;
       this.menuService.setCollapsed(shouldCollpase);
       this.menuService.closeMenu();
-      this.initialColor();
+      if(this.isOnTop()){
+        this.initialColor();
+      }else{
+        this.scrolledColor();
+      }
+      
     }
   }
 

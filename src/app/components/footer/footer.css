@@ -1,0 +1,20 @@
+.app__footer{
+    padding: 20px var(--res-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 100px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.createdBy__link:hover{
+    color: rgb(214, 131, 23);
+}
+
+@media screen and (max-width: 900px){
+    .app__footer{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
