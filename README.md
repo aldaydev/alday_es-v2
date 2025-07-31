@@ -2,6 +2,8 @@
 
 ## feat/home
 * Creación del componente animatedLogo
+* Creación del header "spotlight"
+* Creación de la section "lastProject"
 
 ## feat/header-signals
 * Cambio de observables por signals en menuservice
