@@ -1,8 +1,10 @@
 
 .home__lastProject{
     color: black;
-    padding: 0 var(--res-padding);
-    margin: 40px 0;
+    padding: 40px var(--res-padding);
+    background-image: url('/assets/images/brand/fondo_stream-sessions_blur.webp');
+    background-size: cover;
+    background-position: center;
 }
 
 .lastProject__title{
@@ -26,7 +28,12 @@
 
 .data__title{
     text-transform: uppercase;
+    color: white;
     /* text-align: center; */
+}
+
+.data__typeyear{
+    color: white;
 }
 
 .data__links{
@@ -94,13 +101,14 @@
     width: 100%;
     max-width: 700px;
     min-width: 280px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     text-align: center;
     transition: background .3s ease-in-out, color .3s ease-in-out;
+    color: white;
 }
 
 .lastProject__seeAllLink:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }

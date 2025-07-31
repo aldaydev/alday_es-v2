@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/home-project
+* Trabajando la estética de componente home-last-project
+
 ## feat/home-refactor
 * Refactorización del home y separación por componentes
 * Creación del componente home-spotligth
