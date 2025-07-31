@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/footer
+* Creación del footer genérico
+
 ## feat/home-redesign
 * Revisando estilos del home
 
