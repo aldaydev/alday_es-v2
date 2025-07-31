@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/home-redesign
+* Revisando estilos del home
+
 ## feat/home-video
 * Creación del componente home-video
 * Creación del componente video-iframe (reutilizable)

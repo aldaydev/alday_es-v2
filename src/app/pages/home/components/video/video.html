@@ -1,8 +1,11 @@
 <section class="home__video" id="home-video">
     <h2 class="homeVideo__title">VIDEO RECOMENDADO</h2>
-    @if(highlightedVideoUrl){
+    @if(videos){
         <article class="homeVideo__container">
-            <app-video-iframe [videoUrl]="highlightedVideoUrl"></app-video-iframe>
+            @for (video of videos; track $index) {
+                <app-video-iframe [videoUrl]="video.url"></app-video-iframe>
+            }
+            
         </article>
     }@else {
         <span>Cargando...</span>

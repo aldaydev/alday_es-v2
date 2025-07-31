@@ -1,5 +1,5 @@
 .home__video{
-    padding: 30px var(--res-padding);
+    padding: 50px var(--res-padding);
     scroll-margin-top: 70px;
 }
 
@@ -8,9 +8,14 @@
     margin-bottom: 40px;
 }
 
-/* .homeVideo__container{
+.homeVideo__container{
     width: 100%;
-} */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
 
 .homeVideo__seeAll{
     border: 2px solid black;

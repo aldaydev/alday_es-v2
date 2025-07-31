@@ -14,13 +14,13 @@ export class Video implements OnInit {
 
   private http = inject(HttpClient);
   private cdr = inject(ChangeDetectorRef);
-  highlightedVideoUrl?: string;
+  videos?: Videos;
 
   ngOnInit(): void {
     this.http
       .get<Videos>('assets/data/videos-data.json')
       .subscribe((data) => {
-        this.highlightedVideoUrl = data.filter(video => video.highlight)[0].url;
+        this.videos = data.filter(video => video.highlight);
         this.cdr.detectChanges();
       })
 
