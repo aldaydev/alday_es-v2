@@ -45,6 +45,78 @@
         "project": "Elucubraciones",
         "date": "2018-09-09",
         "url": "https://www.youtube.com/embed/NqHl6cKPdKY?si=1x7Nw1D85uomXfuW",
+        "highlight": false
+    },
+    {
+        "id": 7,
+        "name": "El amor",
+        "project": "Elucubraciones",
+        "date": "2018-10-01",
+        "url": "https://www.youtube.com/embed/LpeRvMRK0aY?si=bQ1vAr6aBJoeUDse",
+        "highlight": false
+    },
+    {
+        "id": 8,
+        "name": "El odio",
+        "project": "Elucubraciones",
+        "date": "2018-10-17",
+        "url": "https://www.youtube.com/embed/imQJt5tC5xQ?si=Finl6Ob6cUvIalJd",
+        "highlight": false
+    },
+    {
+        "id": 9,
+        "name": "El tiempo",
+        "project": "Elucubraciones",
+        "date": "2018-11-07",
+        "url": "https://www.youtube.com/embed/3NdYxwl_T0w?si=sd80Wyh5c44-Xfls",
+        "highlight": false
+    },
+    {
+        "id": 10,
+        "name": "Dios",
+        "project": "Elucubraciones",
+        "date": "2018-11-21",
+        "url": "https://www.youtube.com/embed/kEygWXVdWOE?si=hTCgB7scjbvMpOQf",
+        "highlight": false
+    },
+    {
+        "id": 11,
+        "name": "Tenemos que hablar",
+        "project": "Una victoria, mil derrotas",
+        "date": "2021-07-21",
+        "url": "https://www.youtube.com/embed/5v-F83f77gA?si=a-uL_L90YkdIrGXV",
+        "highlight": false
+    },
+    {
+        "id": 12,
+        "name": "Victoria",
+        "project": "Una victoria, mil derrotas",
+        "date": "2021-10-13",
+        "url": "https://www.youtube.com/embed/b6SthSjKiFo?si=NkWmFsPBp_8rFIcl",
+        "highlight": false
+    },
+    {
+        "id": 13,
+        "name": "El último blues",
+        "project": "Una victoria, mil derrotas",
+        "date": "2021-11-27",
+        "url": "https://www.youtube.com/embed/KJiWp65jiuo?si=Y3SgsJDb0oa9268q",
+        "highlight": false
+    },
+    {
+        "id": 14,
+        "name": "Volver",
+        "project": "Una victoria, mil derrotas",
+        "date": "2021-12-21",
+        "url": "https://www.youtube.com/embed/v9vCKl7JKiI?si=hJGcYq9ln8Jkijwo",
+        "highlight": false
+    },
+    {
+        "id": 15,
+        "name": "Noche de fiesta",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-02-02",
+        "url": "https://www.youtube.com/embed/2b5uJR6eJGU?si=SIIdzo7aPqQJsmQN",
         "highlight": true
     }
 ]
