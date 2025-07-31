@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/home-video
+* Creación del componente home-video
+
 ## feat/home-project
 * Trabajando la estética de componente home-last-project
 
