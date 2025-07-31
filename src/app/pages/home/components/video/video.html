@@ -1,0 +1,13 @@
+<section class="home__video" id="home-video">
+    <h2 class="homeVideo__title">VIDEO RECOMENDADO</h2>
+    @if(highlightedVideoUrl){
+        <article class="homeVideo__container">
+            <app-video-iframe [videoUrl]="highlightedVideoUrl"></app-video-iframe>
+        </article>
+    }@else {
+        <span>Cargando...</span>
+    }
+    <a routerLink="videos" class="homeVideo__seeAll">
+        VER VÍDEOS
+    </a>
+</section>

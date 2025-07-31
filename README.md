@@ -2,6 +2,9 @@
 
 ## feat/home-video
 * Creación del componente home-video
+* Creación del componente video-iframe (reutilizable)
+* Diseño del componente home-video
+* Trabajando el json con los datos de los vídeos
 
 ## feat/home-project
 * Trabajando la estética de componente home-last-project

@@ -1,6 +1,5 @@
 
 .home__lastProject{
-    color: black;
     padding: 40px var(--res-padding);
     background-image: url('/assets/images/brand/fondo_stream-sessions_blur.webp');
     background-size: cover;
@@ -11,6 +10,7 @@
     margin-top: 30px;
     text-align: center;
     margin-bottom: 30px;
+    color: white;
 }
 
 .lastProject__data{
@@ -23,7 +23,9 @@
 }
 
 .data__img{
-    min-width: 280px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 350px;
 }
 
 .data__title{

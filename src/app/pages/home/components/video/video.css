@@ -1,0 +1,33 @@
+.home__video{
+    padding: 30px var(--res-padding);
+    scroll-margin-top: 70px;
+}
+
+.homeVideo__title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* .homeVideo__container{
+    width: 100%;
+} */
+
+.homeVideo__seeAll{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: color .3s ease-in-out, background .3s ease-in-out;
+}
+
+.homeVideo__seeAll:hover{
+    color: white;
+    background-color: black;
+}
