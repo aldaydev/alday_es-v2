@@ -5,63 +5,97 @@
         <h1 class="spotlight__title">MÚSICO Y STREAMER</h1>
         <p class="spotlight__description">TE INVITO A VER MIS TRABAJOS MUSICALES Y VIDEOCLIPS</p>
         <div class="spotlight__linkContainer">
-            <a routerLink="videos" class="spotlight__link spotlight__link--youtube">YOUTUBE</a>
-            <a routerLink="trabajos" class="spotlight__link spotlight__link--spotify">SPOTIFY</a>
-            <a routerLink="videos" class="spotlight__link spotlight__link--apple">APPLE MUSIC</a>
+            <a 
+                href="https://youtube.com/@aldaymusic"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="spotlight__link spotlight__link--youtube"
+            >
+                    YOUTUBE
+            </a>
+            <a 
+                href="https://open.spotify.com/intl-es/artist/0wZDbifislG0bCYZ7ASz0J?si=00b1YqmyTcutaJSVR7Tm4g"
+                target="_blank"
+                rel="noreferrer noopener" 
+                class="spotlight__link spotlight__link--spotify"
+            >
+                SPOTIFY
+            </a>
+            <a 
+                href="https://music.apple.com/es/artist/alday/1215004420"
+                target="_blank"
+                rel="noreferrer noopener" 
+                class="spotlight__link spotlight__link--apple"
+            >
+                APPLE MUSIC
+            </a>
         </div>
-        <a href="#last-project" class="spotlight__arrowContainer">
+        <a (click)="scrollToFragment('last-project')" class="spotlight__arrowContainer">
             <img src="/assets/images/icons/arrow_down.svg" alt="Icono flecha" class="spotlight__arrow"/>
         </a>
     </article>
     <img src="/assets/images/brand/home_image.jpg" alt="Foto Alday">
 </header>
+
 <section id="last-project" class="home__lastProject">
-    <h2 class="lastProject__title">ÚLTIMO TRABAJO</h2>
-    <article class="lastProject__data">
-        <img [src]="lastProject?.cover" [alt]="'Portada de ' + lastProject?.name" class="data__img">
-        <div class="data__infoContainer">
-            <h3 class="data__title">{{ lastProject?.name }}</h3>
-            <h3 class="data__typeyear">
-                {{ lastProject?.type + " - " + lastProject?.year }}
-            </h3>
-            <div class="data__links">
-                <a 
-                    [href]="lastProject?.links?.youtube"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="data__link data__link--youtube"
-                >
-                    <span class="data__linkName">YOUTUBE</span>
-                    <img src="assets/images/icons/youtube-white.svg" class="data__linkIcon data__linkIcon--youtube">
-                </a>
-                <a 
-                    [href]="lastProject?.links?.spotify"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="data__link data__link--spotify"
-                >
-                    <span class="data__linkName">SPOTIFY</span>
-                    <img src="assets/images/icons/spotify-white.svg" class="data__linkIcon">
-                </a>
-                <a 
-                    [href]="lastProject?.links?.apple"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="data__link data__link--apple"
-                >
-                    <span class="data__linkName">APPLE MUSIC</span>
-                    <img src="assets/images/icons/applemusic-white.svg" class="data__linkIcon">
-                </a>
-                <a 
-                    [href]="lastProject?.links?.amazon"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="data__link data__link--amazon"
-                >
-                    <span class="data__linkName">AMAZON MUSIC</span>
-                    <img src="assets/images/icons/amazonmusic-white.svg" class="data__linkIcon">
-                </a>
+    @if(!isLoading && lastProject){
+        <h2 class="lastProject__title">ÚLTIMO TRABAJO</h2>
+        <article class="lastProject__data">
+            <img [src]="lastProject.cover" [alt]="'Portada de ' + lastProject.name" class="data__img">
+            <div class="data__infoContainer">
+                <h3 class="data__title">{{ lastProject.name }}</h3>
+                <h3 class="data__typeyear">
+                    {{ lastProject.type + " - " + lastProject.year }}
+                </h3>
+                <div class="data__links">
+                    <a 
+                        [href]="lastProject.links.youtube"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="data__link data__link--youtube"
+                    >
+                        <span class="data__linkName">YOUTUBE</span>
+                        <img src="assets/images/icons/youtube-white.svg" class="data__linkIcon data__linkIcon--youtube">
+                    </a>
+                    <a 
+                        [href]="lastProject.links.spotify"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="data__link data__link--spotify"
+                    >
+                        <span class="data__linkName">SPOTIFY</span>
+                        <img src="assets/images/icons/spotify-white.svg" class="data__linkIcon">
+                    </a>
+                    <a 
+                        [href]="lastProject.links.apple"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="data__link data__link--apple"
+                    >
+                        <span class="data__linkName">APPLE MUSIC</span>
+                        <img src="assets/images/icons/applemusic-white.svg" class="data__linkIcon">
+                    </a>
+                    <a 
+                        [href]="lastProject.links.amazon"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="data__link data__link--amazon"
+                    >
+                        <span class="data__linkName">AMAZON MUSIC</span>
+                        <img src="assets/images/icons/amazonmusic-white.svg" class="data__linkIcon">
+                    </a>
+                </div>
+                
             </div>
-        </div>
-    </article>
+        </article>
+        <article class="lastProject__seeAll">
+            <a routerLink="trabajos" class="lastProject__seeAllLink">
+                VER TRABAJOS
+            </a>
+        </article>
+    }@else{
+        <h4>Cargando...</h4>
+    }
+    
+    
 </section>
