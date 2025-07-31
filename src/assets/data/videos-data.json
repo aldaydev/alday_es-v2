@@ -117,6 +117,86 @@
         "project": "Una victoria, mil derrotas",
         "date": "2022-02-02",
         "url": "https://www.youtube.com/embed/2b5uJR6eJGU?si=SIIdzo7aPqQJsmQN",
+        "highlight": false
+    },
+    {
+        "id": 16,
+        "name": "Dejarlo ir",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-02-24",
+        "url": "https://www.youtube.com/embed/mMURYe94-yI?si=9bfrJENNSZ42laQR",
+        "highlight": false
+    },
+    {
+        "id": 17,
+        "name": "La distancia",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-03-01",
+        "url": "https://www.youtube.com/embed/Sl-mSid92Mk?si=gvHU1DlMvpZQ59HV",
+        "highlight": false
+    },
+    {
+        "id": 18,
+        "name": "La mujer fantasma",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-03-06",
+        "url": "https://www.youtube.com/embed/iSOyjFzQGEo?si=P_YqYnQtGbdqpiGR",
+        "highlight": false
+    },
+    {
+        "id": 19,
+        "name": "Saber quién eres",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-03-12",
+        "url": "https://www.youtube.com/embed/0dWH3x4Rzo4?si=EeW38yRhLUpGJ2_Q",
+        "highlight": false
+    },
+    {
+        "id": 20,
+        "name": "Jugar o perder",
+        "project": "Una victoria, mil derrotas",
+        "date": "2022-03-18",
+        "url": "https://www.youtube.com/embed/7QuH5fp-ouY?si=AGNM_U82gENU1SPP",
+        "highlight": false
+    },
+    {
+        "id": 21,
+        "name": "Cima ingobernable",
+        "project": "Stream Sessions",
+        "date": "2023-07-19",
+        "url": "https://www.youtube.com/embed/q35yw5k8JqA?si=lAQd_jQmMLfFgw-W",
+        "highlight": false
+    },
+    {
+        "id": 22,
+        "name": "Dispárame",
+        "project": "Stream Sessions",
+        "date": "2023-08-27",
+        "url": "https://www.youtube.com/embed/a4GZnXQbZbI?si=NVPevs2BGT_W56Ht",
+        "highlight": false
+    },
+    {
+        "id": 23,
+        "name": "Mujer imán",
+        "project": "Stream Sessions",
+        "date": "2023-09-29",
+        "url": "https://www.youtube.com/embed/lcOeyKjCt8A?si=h3RQrcTalrKRC3IY",
+        "highlight": false
+    },
+    {
+        "id": 24,
+        "name": "Viajeros",
+        "project": "Stream Sessions",
+        "date": "2023-12-08",
+        "url": "https://www.youtube.com/embed/ImCJBbfbB88?si=AJuoGspZneOZ4MsM",
         "highlight": true
+    },
+    {
+        "id": 25,
+        "name": "Ibiza",
+        "project": "Stream Sessions",
+        "date": "2023-02-2024",
+        "url": "https://www.youtube.com/embed/0RnIXY-GT6Q?si=KaDr6Xl2X5lSnmyK",
+        "highlight": false
     }
 ]
