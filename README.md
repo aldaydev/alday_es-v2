@@ -2,6 +2,7 @@
 
 ## feat/footer
 * Creación del footer genérico
+* Enlace a aldaydev
 
 ## feat/home-redesign
 * Revisando estilos del home
