@@ -1,8 +1,8 @@
 export interface ProjectLinks {
     spotify: string,
     youtube: string,
-    apple: string,
-    amazon: string,
+    applemusic: string,
+    amazonmusic: string,
 }
 
 export interface Project {

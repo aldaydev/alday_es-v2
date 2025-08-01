@@ -3,6 +3,9 @@
     <span>{{project.name}}</span>
     <span>{{project.type}} - {{project.year}}</span>
     @for (link of linksArr; track $index) {
-        <a [href]="link.value">{{link.key}}</a>
+        <a [href]="link.value">
+            
+            <img [src]="'/assets/images/icons/' + link.key + '-white.svg'">
+        </a>
     }
 </div>

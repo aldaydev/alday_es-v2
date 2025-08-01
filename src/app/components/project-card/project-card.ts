@@ -17,6 +17,7 @@ export class ProjectCard implements OnInit {
     if(this.project.links){
       this.linksArr = Object.entries(this.project.links).map(([key, value]) => ({key, value}))
     }
+    console.log(this.linksArr)
   }
 
 

@@ -7,8 +7,8 @@
         "links": {
             "spotify": "https://open.spotify.com/album/5sg4ZPdveJ4NtbfincEhB0?si=HG4mwVGuQeauCvq_wdeTVg",
             "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcIE9ItYNxCYVXAZR-hDBSYS&si=dGss7TJ6_iwKane5",
-            "apple": "https://music.apple.com/es/album/la-jungla-o-mirar-atr%C3%A1s-ep/1766850534",
-            "amazon": "https://music.amazon.es/albums/B0DDX7F5SS?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_rSXc96xRbbHosWIEkrdoh4kUW"
+            "applemusic": "https://music.applemusic.com/es/album/la-jungla-o-mirar-atr%C3%A1s-ep/1766850534",
+            "amazonmusic": "https://music.amazonmusic.es/albums/B0DDX7F5SS?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_rSXc96xRbbHosWIEkrdoh4kUW"
         },
         "cover": "assets/images/projects/portada_la-jungla_350px.jpg"
     },
@@ -20,8 +20,8 @@
         "links": {
             "spotify": "https://open.spotify.com/album/37ba2qMsNVTXMTP9K9Yx94?si=zNMeBkP6ToCPTY_dKjLcfw",
             "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcL1wVPDhQAN8hdmwN8lfikl&si=-UfUcaH0nB2A05nz",
-            "apple": "https://music.apple.com/es/album/elucubraciones-versi%C3%B3n-extendida-ep/1773199838",
-            "amazon": "https://music.amazon.es/albums/B0DDX3HV4S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_JVLqpjcJEAyZlDCGZKvqPINLc"
+            "applemusic": "https://music.applemusic.com/es/album/elucubraciones-versi%C3%B3n-extendida-ep/1773199838",
+            "amazonmusic": "https://music.amazonmusic.es/albums/B0DDX3HV4S?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_JVLqpjcJEAyZlDCGZKvqPINLc"
         },
         "cover": "assets/images/projects/portada_elucubraciones_350px.jpg"
     },
@@ -33,8 +33,8 @@
         "links": {
             "spotify": "https://open.spotify.com/album/3HQRjLSWgpll7ftyER7ju1?si=_TUGad7-Tl2ltykyp318gQ",
             "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcKZZutdVK4eC_rqyWkOUUok&si=nxtuGGeEoHMYI-k5",
-            "apple": "https://music.apple.com/es/album/una-victoria-mil-derrotas/1766851847",
-            "amazon": "https://music.amazon.es/albums/B0DDX6P5TZ?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_WgQGgIvXBHhHFZUFnyZiD67oq"
+            "applemusic": "https://music.applemusic.com/es/album/una-victoria-mil-derrotas/1766851847",
+            "amazonmusic": "https://music.amazonmusic.es/albums/B0DDX6P5TZ?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_WgQGgIvXBHhHFZUFnyZiD67oq"
         },
         "cover": "assets/images/projects/portada_uvmd_350px.jpg"
     },
@@ -46,8 +46,8 @@
         "links": {
             "spotify": "https://open.spotify.com/album/2ADKwpfaifRfpXpRMW3wwQ?si=R-LSCKnmSxaMx-kQp9Ehdg",
             "youtube": "https://youtube.com/playlist?list=PLhQ0N3CD2GcKP6zpex7S2ohfVnXlAcQEO&si=C2gT-guv-BX5mhL8",
-            "apple": "https://music.apple.com/es/album/stream-sessions-ep/1775797161",
-            "amazon": "https://music.amazon.es/albums/B0DF2Y86B3?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_2fX8WZkknltc1hcrUDkowJJ7Q"
+            "applemusic": "https://music.applemusic.com/es/album/stream-sessions-ep/1775797161",
+            "amazonmusic": "https://music.amazonmusic.es/albums/B0DF2Y86B3?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_2fX8WZkknltc1hcrUDkowJJ7Q"
         },
         "cover": "assets/images/projects/portada_stream-sessions_350px.jpg"
     }
