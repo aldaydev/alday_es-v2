@@ -1,7 +1,9 @@
 # AldayEsV2
 
 ## feat/projects
-* Diseño inicial de la página "trabajos"
+* Creación del componente projects-spotlight
+* Creación y testeo de componente project-list
+* Creación del componente reutilizable project-card
 
 
 ## feat/footer

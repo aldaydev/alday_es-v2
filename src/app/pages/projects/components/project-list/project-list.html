@@ -1,0 +1,16 @@
+<section class="projects__projectList"> 
+    <h2 class="projectList__title">Todos mis trabajos</h2>
+    <article class="projectList__sort">
+        Ordenar por:
+        <button (click)="changeOrder()">
+            Ordenar
+        </button>
+    </article>
+    <article class="projectList__list">
+        @if(projectList){
+            @for (project of projectList; track $index) {
+                <img [src]="project.cover">
+            }
+        }
+    </article>
+</section>
