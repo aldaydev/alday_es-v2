@@ -9,7 +9,7 @@
     <article class="projectList__list">
         @if(projectList){
             @for (project of projectList; track $index) {
-                <img [src]="project.cover">
+                <project-card [project]="project"></project-card>
             }
         }
     </article>

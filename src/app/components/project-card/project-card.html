@@ -1,0 +1,8 @@
+<div class="projectCard">
+    <img [src]="project.cover">
+    <span>{{project.name}}</span>
+    <span>{{project.type}} - {{project.year}}</span>
+    @for (link of linksArr; track $index) {
+        <a [href]="link.value">{{link.key}}</a>
+    }
+</div>

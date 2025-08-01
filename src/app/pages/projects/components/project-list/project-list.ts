@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { Projects } from '../../../../types/projects.type';
+import { ProjectCard } from '../../../../components/project-card/project-card';
 
 @Component({
   selector: 'project-list',
-  imports: [],
+  imports: [ProjectCard],
   templateUrl: './project-list.html',
   styleUrl: './project-list.css'
 })
