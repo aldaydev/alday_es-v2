@@ -1,7 +1,7 @@
 
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MenuService } from '../../services/menu.service';
+import { MenuService } from '../../services/menu.service/menu.service';
 import { isPlatformBrowser } from '@angular/common';
 import { NavIcons } from '../nav-icons/nav-icons';
 import { Logo } from "../logo/logo";

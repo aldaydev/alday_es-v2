@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ProjectsSpotlight } from "./components/spotlight/projects-spotlight";
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ProjectsSpotlight],
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })

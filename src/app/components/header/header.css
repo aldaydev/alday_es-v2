@@ -7,7 +7,7 @@
     align-items: center;
     padding: 10px var(--res-padding);
     height: 70px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     position: fixed;
     width: 100dvw;
     z-index: 999;

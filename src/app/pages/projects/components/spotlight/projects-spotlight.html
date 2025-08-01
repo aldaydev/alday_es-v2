@@ -1,9 +1,12 @@
 <header class="spotlight">
     <div class="overlay"></div>
     <article class="spotlight__info">
-        <app-animated-logo></app-animated-logo>
-        <h1 class="spotlight__title">MÚSICO Y STREAMER</h1>
-        <p class="spotlight__description">TE INVITO A VER MIS TRABAJOS MUSICALES Y VIDEOCLIPS</p>
+        <h1 class="spotlight__title">TRABAJOS</h1>
+        <div class="spotlight__descriptionContainer">
+            <p class="spotlight__description">AQUÍ PODRÁS VER TODOS MIS TRABAJOS MUSICALES.</p>
+            <p class="spotlight__description"> RECUERDA QUE PUEDES ESCUCHARLOS EN TODAS LAS PLATAFORMAS DIGITALES</p>
+        </div>
+        
         <div class="spotlight__linkContainer">
             <a 
                 href="https://youtube.com/@aldaymusic"
@@ -33,9 +36,10 @@
                 <img src="/assets/images/icons/applemusic-white.svg" class="spotlight__linkIcon">
             </a>
         </div>
-        <a (click)="goToSection('home-video')" class="spotlight__arrowContainer">
+        <a (click)="goToSection('first-section')" class="spotlight__arrowContainer">
             <img src="/assets/images/icons/arrow_down.svg" alt="Icono flecha" class="spotlight__arrow"/>
         </a>
     </article>
-    <img src="/assets/images/brand/home_image.jpg" alt="Foto Alday">
+    <img src="/assets/images/brand/bg_volver.webp" alt="Foto Alday">
 </header>
+
