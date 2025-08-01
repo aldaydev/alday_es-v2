@@ -2,10 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { Projects } from '../../../../types/projects.type';
 import { Videos } from '../../../../types/videos.type';
+import { VideoIframe } from '../../../../components/video-iframe/video-iframe';
 
 @Component({
   selector: 'video-list',
-  imports: [],
+  imports: [VideoIframe],
   templateUrl: './video-list.html',
   styleUrl: './video-list.css'
 })
@@ -18,6 +19,7 @@ export class VideoList implements OnInit {
   projectList : string[] = [];
   yearList : number[] = [];
   videoList! : Videos;
+  filteredVideos! : Videos;
 
   ngOnInit(): void {
     this.getFormOptions();
@@ -33,6 +35,7 @@ export class VideoList implements OnInit {
           this.yearList.push(project.year);
         })
       })
+    this.cdr.detectChanges();
   }
 
   getVideoList() : void {
@@ -40,7 +43,25 @@ export class VideoList implements OnInit {
       .get<Videos>('assets/data/videos-data.json')
       .subscribe((data) => {
         this.videoList = data.sort((a, b) => b.id - a.id);
+        this.filteredVideos = this.videoList;
       })
+    this.cdr.detectChanges();
+  }
+
+  sortByProject(event: Event) : void {
+    if (!this.videoList || this.videoList.length === 0) {
+      console.warn('Video list no cargada aún');
+      return;
+    }
+    const selectElement = event.target as HTMLSelectElement;
+    const selectedValue = selectElement.value;
+
+    console.log('Selected:', selectedValue);
+    console.log('Todos los project de los vídeos:', this.videoList.map(v => v.project));
+
+    this.filteredVideos = this.videoList.filter((video) => video.project.toLowerCase().trim() === selectedValue.toLowerCase().trim());
+    this.cdr.detectChanges();
+    console.log(this.filteredVideos);
   }
 
 }

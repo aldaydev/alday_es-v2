@@ -1,8 +1,27 @@
 <section class="videos__videoList" id="first-section">
     <h2 class="projectList__title">Videoclips y Lyric Videos</h2>
     <form class="projectList__filter">
+        <span>Filtrar por</span>
         <label>
-            
+            <span>Trabajos: </span>
+            <select (change)="sortByProject($event)">
+            @for (project of projectList; track $index) {
+                <option [value]="project">{{project}}</option>
+            }   
+            </select>
+        </label>
+        <label>
+            <span>Año: </span>
+            <select>
+            @for (year of yearList; track $index) {
+                <option>{{year}}</option>
+            }
+            </select>
         </label>
     </form>
+    <article class="videoList__list">
+        @for (video of filteredVideos; track video.url) {
+            <app-video-iframe [videoUrl]="video.url"></app-video-iframe>
+        }
+    </article>
 </section>

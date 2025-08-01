@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -11,11 +11,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class VideoIframe implements OnInit {
   @Input() videoUrl!: string;
   safeUrl!: SafeResourceUrl;
+  private cdr = inject(ChangeDetectorRef);
 
   constructor(private sanitizer: DomSanitizer) {}
 
 
   ngOnInit(){
     this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
+    this.cdr.detectChanges();
   }
 }
