@@ -1,11 +1,23 @@
 <div class="projectCard">
-    <img [src]="project.cover">
-    <span>{{project.name}}</span>
-    <span>{{project.type}} - {{project.year}}</span>
-    @for (link of linksArr; track $index) {
-        <a [href]="link.value">
-            
-            <img [src]="'/assets/images/icons/' + link.key + '-white.svg'">
-        </a>
-    }
+    <img 
+        [src]="project.cover" 
+        [alt]="'Portada de' + project.name"
+        class="projectCard__cover"
+    >
+    <span class="projectCard__title">{{project.name}}</span>
+    <span class="projectCard__yeartype">{{project.type}} - {{project.year}}</span>
+    <div class="projectCard__links">
+        @for (link of linksArr; track $index) {
+            <a 
+                [href]="link.value"
+                target="_blank"
+                rel="noreferrer noopener"
+                [class]="'projectCard__link projectCard__link--'+link.key"
+            >
+                
+                <img [src]="'/assets/images/icons/' + link.key + '.svg'">
+            </a>
+        }
+    </div>
+    
 </div>

@@ -1,9 +1,12 @@
 <section class="projects__projectList"> 
     <h2 class="projectList__title">Todos mis trabajos</h2>
     <article class="projectList__sort">
-        Ordenar por:
-        <button (click)="changeOrder()">
-            Ordenar
+        <button (click)="changeOrder()" class="projectList__sortButton">
+            @if(order === 'ascendente'){
+                FECHA ASCENDENTE
+            }@else {
+                FECHA DESCENDENTE
+            }
         </button>
     </article>
     <article class="projectList__list">

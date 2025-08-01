@@ -8,6 +8,11 @@
     flex-wrap: wrap;
 }
 
+.footer__rights{
+    text-wrap: pretty;
+    text-align: center;
+}
+
 .createdBy__link:hover{
     color: rgb(214, 131, 23);
 }

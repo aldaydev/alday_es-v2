@@ -1,4 +1,52 @@
 .projectCard{
-    background-color: rgb(0, 0, 0);
+    background-color: #cfcfcf;
     color: white;
+
+    justify-content: stretch; /* o space-between o lo que necesites */
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
+
+.projectCard__cover{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.projectCard__title,
+.projectCard__yeartype{
+    text-align: center;
+}
+
+.projectCard__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin-top: 15px;
+}
+
+.projectCard__link{
+    height: 30px;
+    transition: scale .2s ease-in-out;
+}
+
+.projectCard__link--youtube{
+    height: 35px;
+}
+
+.projectCard__link--amazonmusic{
+    height: 33px;
+}
+
+
+.projectCard__link img{
+    height: 100%;
+}
+
+.projectCard__link:hover{
+    scale: 1.1;
+}
+
