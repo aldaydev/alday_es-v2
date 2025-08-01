@@ -1,10 +1,12 @@
 # AldayEsV2
 
+
+
 ## feat/projects
 * Creación del componente projects-spotlight
 * Creación y testeo de componente project-list
 * Creación del componente reutilizable project-card
-
+* Trabajando el responsive
 
 ## feat/footer
 * Creación del footer genérico
