@@ -1,5 +1,9 @@
 # AldayEsV2
 
+## feat/projects
+* Diseño inicial de la página "trabajos"
+
+
 ## feat/footer
 * Creación del footer genérico
 * Enlace a aldaydev
