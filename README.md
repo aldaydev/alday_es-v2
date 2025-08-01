@@ -1,6 +1,7 @@
 # AldayEsV2
 
-
+## feat/videos
+* Creación del componente videos-spotlight
 
 ## feat/projects
 * Creación del componente projects-spotlight
