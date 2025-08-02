@@ -2,6 +2,8 @@
 
 ## feat/videos
 * Creación del componente videos-spotlight
+* Creación del componente video-list
+* Diseño de la lógica de filtrado del listado de vídeos
 
 ## feat/projects
 * Creación del componente projects-spotlight
