@@ -96,8 +96,8 @@ app-animated-logo{
     scale: 1.1;
 }
 
-.spotlight__link--spotify{
-    background-color: var(--color-spotify);
+.spotlight__link--instagram{
+    background-color: var(--color-instagram);
 }
 
 .spotlight__link--apple{
