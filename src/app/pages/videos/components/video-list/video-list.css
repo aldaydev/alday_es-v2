@@ -1,4 +1,46 @@
+.videos__videoList{
+    padding: 30px var(--res-padding);
+    scroll-margin-top: 70px;
+}
+
+.projectList__title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projectList__filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectList__labelsContainers{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.projectList__labelsContainers select{
+    padding: 3px 5px;
+    font-size: 1.6rem;
+}
+
 .videoList__list{
+    margin: 40px 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .videoList__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .videoList__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

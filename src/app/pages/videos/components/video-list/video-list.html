@@ -2,22 +2,26 @@
     <h2 class="projectList__title">Videoclips y Lyric Videos</h2>
     <form class="projectList__filter">
         <span>Filtrar por</span>
-        <label>
-            <span>Trabajos: </span>
-            <select (change)="sortByProject($event)">
-            @for (project of projectList; track $index) {
-                <option [value]="project">{{project}}</option>
-            }   
-            </select>
-        </label>
-        <label>
-            <span>Año: </span>
-            <select>
-            @for (year of yearList; track $index) {
-                <option>{{year}}</option>
-            }
-            </select>
-        </label>
+        <div class="projectList__labelsContainers">
+            <label>
+                <span>Trabajo: </span>
+                <select (change)="sortByProject($event)">
+                    <option value="Todos">Todos</option>
+                    @for (project of projectList; track $index) {
+                        <option [value]="project">{{project}}</option>
+                    }   
+                </select>
+            </label>
+            <label>
+                <span>Año: </span>
+                <select>
+                    @for (year of yearList; track $index) {
+                        <option>{{year}}</option>
+                    }
+                </select>
+            </label>
+        </div>
+        
     </form>
     <article class="videoList__list">
         @for (video of filteredVideos; track video.url) {

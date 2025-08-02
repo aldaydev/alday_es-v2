@@ -1,6 +1,7 @@
 .projects__projectList{
     padding: 30px var(--res-padding);
     padding-bottom: 100px;
+    scroll-margin-top: 70px;
 }
 
 .projectList__title{

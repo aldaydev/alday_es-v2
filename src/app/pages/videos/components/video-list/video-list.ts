@@ -59,9 +59,16 @@ export class VideoList implements OnInit {
     console.log('Selected:', selectedValue);
     console.log('Todos los project de los vídeos:', this.videoList.map(v => v.project));
 
-    this.filteredVideos = this.videoList.filter((video) => video.project.toLowerCase().trim() === selectedValue.toLowerCase().trim());
-    this.cdr.detectChanges();
-    console.log(this.filteredVideos);
+    if(selectedValue !== "Todos"){
+      this.filteredVideos = this.videoList.filter((video) => video.project.toLowerCase().trim() === selectedValue.toLowerCase().trim());
+      this.cdr.detectChanges();
+    }else{
+      this.filteredVideos = this.videoList;
+      this.cdr.detectChanges();
+    }
+    
+    
+
   }
 
 }
