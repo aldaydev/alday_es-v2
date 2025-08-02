@@ -1,10 +1,13 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   ChangeDetectorRef,
   Component,
   ElementRef,
+  Inject,
   inject,
   Input,
   OnInit,
+  PLATFORM_ID,
 } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -23,10 +26,15 @@ export class VideoIframe implements OnInit {
   visible = false;
   private observer?: IntersectionObserver;
 
-  constructor(private el: ElementRef, private sanitizer: DomSanitizer) {}
+  constructor(
+    private el: ElementRef, 
+    private sanitizer: DomSanitizer,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit() {
-    this.observer = new IntersectionObserver((entries) => {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         console.log('VISIBLE', this.videoUrl);
         this.visible = true;
@@ -38,6 +46,8 @@ export class VideoIframe implements OnInit {
       }
     });
     this.observer.observe(this.el.nativeElement);
+    }
+    
   }
 
   ngOnDestroy() {
