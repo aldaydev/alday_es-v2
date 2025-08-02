@@ -1,5 +1,8 @@
 # AldayEsV2
 
+## feat/bio
+* Creación del componente bio-spotlight
+
 ## feat/videos
 * Creación del componente videos-spotlight
 * Creación del componente video-list
