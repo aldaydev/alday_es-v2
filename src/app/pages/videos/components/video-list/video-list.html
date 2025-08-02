@@ -5,7 +5,7 @@
         <div class="projectList__labelsContainers">
             <label>
                 <span>Trabajo: </span>
-                <select (change)="sortByProject($event)">
+                <select id="project-select" (change)="sortByProject($event)">
                     <option value="Todos">Todos</option>
                     @for (project of projectList; track $index) {
                         <option [value]="project">{{project}}</option>
@@ -14,7 +14,8 @@
             </label>
             <label>
                 <span>Año: </span>
-                <select>
+                <select id="date-select" (change)="sortByDate($event)">
+                    <option value="Todos">Todos</option>
                     @for (year of yearList; track $index) {
                         <option>{{year}}</option>
                     }

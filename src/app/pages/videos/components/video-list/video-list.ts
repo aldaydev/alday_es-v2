@@ -3,10 +3,12 @@ import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { Projects } from '../../../../types/projects.type';
 import { Videos } from '../../../../types/videos.type';
 import { VideoIframe } from '../../../../components/video-iframe/video-iframe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'video-list',
-  imports: [VideoIframe],
+  standalone: true,
+  imports: [VideoIframe, FormsModule],
   templateUrl: './video-list.html',
   styleUrl: './video-list.css'
 })
@@ -17,9 +19,15 @@ export class VideoList implements OnInit {
 
   isLoading: boolean = true;
   projectList : string[] = [];
-  yearList : number[] = [];
+  yearList : number[] = [2017, 2018, 2021, 2022, 2023, 2024];
   videoList! : Videos;
   filteredVideos! : Videos;
+
+  selectedProject : string = 'Todos';
+  selectedDate: number | string = 'Todos';
+
+  filteringByProject : boolean = false;
+  filteringByDate : boolean = false;
 
   ngOnInit(): void {
     this.getFormOptions();
@@ -32,7 +40,7 @@ export class VideoList implements OnInit {
       .subscribe((data) => {
         data.forEach((project) => {
           this.projectList.push(project.name);
-          this.yearList.push(project.year);
+          // this.yearList.push(project.year);
         })
       })
     this.cdr.detectChanges();
@@ -56,9 +64,6 @@ export class VideoList implements OnInit {
     const selectElement = event.target as HTMLSelectElement;
     const selectedValue = selectElement.value;
 
-    console.log('Selected:', selectedValue);
-    console.log('Todos los project de los vídeos:', this.videoList.map(v => v.project));
-
     if(selectedValue !== "Todos"){
       this.filteredVideos = this.videoList.filter((video) => video.project.toLowerCase().trim() === selectedValue.toLowerCase().trim());
       this.cdr.detectChanges();
@@ -66,9 +71,39 @@ export class VideoList implements OnInit {
       this.filteredVideos = this.videoList;
       this.cdr.detectChanges();
     }
-    
-    
 
+    const dateSelect = document.getElementById('date-select') as HTMLSelectElement;
+
+    if(dateSelect.value !== 'Todos'){
+      dateSelect.value = "Todos"
+    }
+
+  }
+
+  sortByDate(event: Event) : void {
+    if (!this.videoList || this.videoList.length === 0) {
+      console.warn('Video list no cargada aún');
+      return;
+    }
+    const selectElement = event.target as HTMLSelectElement;
+    const selectedValue = selectElement.value;
+
+    if(selectedValue !== "Todos"){
+      this.filteredVideos = this.videoList.filter((video) => {
+        const videoYear = new Date(video.date).getFullYear();
+        return videoYear === Number(selectedValue);
+      });
+      this.cdr.detectChanges();
+    }else{
+      this.filteredVideos = this.videoList;
+      this.cdr.detectChanges();
+    }
+
+    const projectSelect = document.getElementById('project-select') as HTMLSelectElement;
+
+    if(projectSelect.value !== 'Todos'){
+      projectSelect.value = "Todos"
+    }
   }
 
 }
