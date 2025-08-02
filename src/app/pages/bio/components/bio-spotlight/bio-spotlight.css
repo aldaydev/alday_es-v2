@@ -1,0 +1,132 @@
+.spotlight {
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+}
+
+.spotlight img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.spotlight .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.582);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.spotlight__info{
+    padding: 0 var(--res-padding);
+    padding-top: 70px;
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.spotlight__title{
+    font-size: 3.5rem;
+    text-align: center;
+    text-wrap: balance;
+    color: white;
+    animation: slide-in-up .3s ease-in-out both;
+}
+
+.spotlight__descriptionContainer{
+    margin: 40px;
+}
+
+.spotlight__description{
+    font-size: 2.3rem;
+    font-weight: 400;
+    max-width: 800px;
+    text-align: center;
+    text-wrap: balance;
+    color: white;
+    animation: slide-in-up .3s ease-in-out .2s both;
+}
+
+app-animated-logo{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.spotlight__linkContainer{
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 20px;
+
+    animation: slide-in-up .3s ease-in-out .3s both;
+}
+
+.spotlight__link{
+    padding: 5px 25px;
+    border-radius: 10px;
+    transition: scale .3s ease-in-out;
+    text-wrap: nowrap;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.spotlight__link:hover{
+    scale: 1.1;
+}
+
+.spotlight__link--spotify{
+    background-color: var(--color-spotify);
+}
+
+.spotlight__link--apple{
+    background-color: var(--color-apple);
+}
+
+.spotlight__link--youtube{
+    background-color: var(--color-youtube);
+}
+
+.spotlight__linkText{
+    color: white;
+}
+
+.spotlight__link .spotlight__linkIcon{
+    width: auto;
+    height: 30px;
+}
+
+.spotlight__link--apple .spotlight__linkIcon,
+.spotlight__link--spotify .spotlight__linkIcon{
+    width: auto;
+    height: 25px;
+}
+
+.spotlight__arrowContainer{
+    animation: slide-in-up 1s ease-in-out .5s both;
+}
+
+.spotlight__arrow{
+    animation: float 2s ease-in-out infinite both;
+}
