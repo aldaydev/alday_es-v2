@@ -1,7 +1,12 @@
 # AldayEsV2
 
+## feat/meta
+* Cargando capturas de las páginas
+* Trabajando metadata de cada página
+
 ## feat/bio
 * Creación del componente bio-spotlight
+* Creación del componente bio-info
 
 ## feat/videos
 * Creación del componente videos-spotlight
