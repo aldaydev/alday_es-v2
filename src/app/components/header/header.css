@@ -145,6 +145,10 @@
     position: relative;
 }
 
+.headerNav__pageLink{
+    color: inherit;
+}
+
 /* .headerNav__pageLink--active::after{
     content: "";
     position: absolute;

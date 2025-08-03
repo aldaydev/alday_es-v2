@@ -21,7 +21,12 @@
             [class.headerNav__pageList--mobile]="menuService.isCollapsedSignal()"
         >
             <li class="headerNav__pageItem" [class.color--white]="(bgColor() === 'transparent')">
-                <a routerLink="/trabajos" class="headerNav__pageLink" (click)="closeMenu()" routerLinkActive="headerNav__pageLink--active">TRABAJOS 
+                <a 
+                    routerLink="/trabajos" 
+                    class="headerNav__pageLink" 
+                    (click)="closeMenu()" 
+                    routerLinkActive="headerNav__pageLink--active" 
+                >TRABAJOS 
                     <span class="headerNav__pageLink--hover" [class.bgColor--white]="(bgColor() === 'transparent')" [class.bgColor--black]="(bgColor() !== 'transparent')"></span>
                 </a>
             </li>

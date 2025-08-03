@@ -13,6 +13,10 @@
     text-align: center;
 }
 
+.createdBy__link{
+    color: black;
+}
+
 .createdBy__link:hover{
     color: rgb(214, 131, 23);
 }
