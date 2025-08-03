@@ -130,3 +130,23 @@ app-animated-logo{
 .spotlight__arrow{
     animation: float 2s ease-in-out infinite both;
 }
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(20px);
+    }100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-up {
+    0%{
+        transform:translateY(20px);
+        opacity: 0;
+    }100%{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
