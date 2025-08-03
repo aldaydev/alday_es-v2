@@ -18,7 +18,17 @@
 .projectList__labelsContainers{
     margin-top: 20px;
     display: flex;
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
+}
+
+.projectList__labelsContainers label{
+    display: flex;
+    column-gap: 15px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projectList__labelsContainers select{

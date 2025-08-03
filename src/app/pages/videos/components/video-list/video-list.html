@@ -4,15 +4,6 @@
         <span>Filtrar por</span>
         <div class="projectList__labelsContainers">
             <label>
-                <span>Trabajo: </span>
-                <select id="project-select" (change)="sortByProject($event)">
-                    <option value="Todos">Todos</option>
-                    @for (project of projectList; track $index) {
-                        <option [value]="project">{{project}}</option>
-                    }   
-                </select>
-            </label>
-            <label>
                 <span>Año: </span>
                 <select id="date-select" (change)="sortByDate($event)">
                     <option value="Todos">Todos</option>
@@ -21,6 +12,16 @@
                     }
                 </select>
             </label>
+            <label>
+                <span>Trabajo: </span>
+                <select id="project-select" (change)="sortByProject($event)">
+                    <option value="Todos">Todos</option>
+                    @for (project of projectList; track $index) {
+                        <option [value]="project">{{project}}</option>
+                    }   
+                </select>
+            </label>
+            
         </div>
         
     </form>
