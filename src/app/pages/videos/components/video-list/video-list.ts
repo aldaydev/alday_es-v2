@@ -34,6 +34,10 @@ export class VideoList implements OnInit {
     this.getVideoList();
   }
 
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
+  }
+
   getFormOptions () : void {
     this.http
       .get<Projects>('assets/data/projects-data.json')
@@ -41,9 +45,10 @@ export class VideoList implements OnInit {
         data.forEach((project) => {
           this.projectList.push(project.name);
           // this.yearList.push(project.year);
+          this.cdr.detectChanges();
         })
       })
-    this.cdr.detectChanges();
+    
   }
 
   getVideoList() : void {
@@ -52,8 +57,9 @@ export class VideoList implements OnInit {
       .subscribe((data) => {
         this.videoList = data.sort((a, b) => b.id - a.id);
         this.filteredVideos = this.videoList;
+        this.cdr.detectChanges();
       })
-    this.cdr.detectChanges();
+    
   }
 
   sortByProject(event: Event) : void {
